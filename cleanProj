@@ -1,0 +1,9 @@
+!#/bin/bash
+clear
+cd /opt/tomcat/webapps/
+sudo initctl stop tomcat
+sudo rm -rf webService
+sudo rm -rf backend
+sudo rm webService.war
+sudo rm backend.war
+sudo initctl start tomcat

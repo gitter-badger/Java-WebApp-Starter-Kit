@@ -9,7 +9,7 @@ A solid starting point for Building a new Start-Up that Based on Java as Backend
 ```
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
-sudo apt-get install oracle-java8-instal    ler
+sudo apt-get install oracle-java8-installer
 ```
 =================
 #### Git 2.8.2
@@ -38,14 +38,14 @@ wget http://mirror.sdunix.com/apache/tomcat/tomcat-8/v8.0.33/bin/apache-tomcat-8
 sudo mkdir /opt/tomcat
 sudo tar xvf apache-tomcat-8*tar.gz -C /opt/tomcat --strip-components=1
 cd /opt/tomcat
-sudo chgrp -R tomcat conf
-sudo chmod g+rwx conf
-sudo chmod g+r conf/*
-sudo chown -R tomcat work/ temp/ logs/
+sudo chgrp -R tomcat conf webapps
+sudo chmod g+rwx conf webapps
+sudo chmod g+r conf/* webapps/*
+sudo chown -R tomcat work/ temp/ logs/ webapps/
 ```
 Where java is
 ```
-sudo update-alternatives --config java
+sudo update-alternatives --webapp.config java
 ```
 Create a new start up script
 ```
@@ -126,6 +126,10 @@ Works with Mysql 5.7.12 vs Postgres 9.5.2 vs mariaDB 10.1.14
 
 AWS / Google cloud / Azzure SDKs
 
+SendGrid / MailChimp Sdks
+
+codeCov and coveralls and travis CI integrations
+
 Struts 2
 
 Guava 19
@@ -138,7 +142,7 @@ lombok 1.16.8
 
 sl4j 1.7.21
 
-sl4j 1.2.17
+logback 1.1.7
 
 SpringMock MVC 2.3.4
 
@@ -152,6 +156,8 @@ Mockito 1.10.19
 
 ## How To Start
 
+./cleanProj
+
 mvn clean install
 
 ## How Can I contribute to this wonderfull project
@@ -161,26 +167,3 @@ and of course don't forget to push when you done.
 ## What to do with the Complains
 
 email to yliskovich@gmail.com
-
-## License
-The MIT License (MIT)
-
-Copyright (c) 2016 liskov
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
