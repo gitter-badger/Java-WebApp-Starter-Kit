@@ -1,4 +1,6 @@
 # Java-WebApp-Starter-Kit
+
+[![Join the chat at https://gitter.im/liskov/Java-WebApp-Starter-Kit](https://badges.gitter.im/liskov/Java-WebApp-Starter-Kit.svg)](https://gitter.im/liskov/Java-WebApp-Starter-Kit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Spring based WebApp Starter Kit(Boilerplate) Based on Java 8 And
  with very customizable and scalable structure.
 
