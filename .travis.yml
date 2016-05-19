@@ -3,4 +3,4 @@ language: java
 jdk:
   - oraclejdk8
 install:
-  mvn clean install -profile travis
+  mvn clean install -Ptravis
