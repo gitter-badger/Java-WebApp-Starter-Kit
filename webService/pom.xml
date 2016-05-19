@@ -100,21 +100,43 @@
         </dependency>
 
     </dependencies>
-
-    <build>
-        <pluginManagement>
-            <plugins>
-                <!-- making the war -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-war-plugin</artifactId>
-                    <version>${maven.war.plugin}</version>
-                    <configuration>
-                        <warName>webService</warName>
-                        <outputDirectory>/opt/tomcat/webapps/</outputDirectory>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
+    <profiles>
+    <profile>
+        <id>dev</id>
+        <build>
+            <pluginManagement>
+                <plugins>
+                    <!-- making the war -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-war-plugin</artifactId>
+                        <version>${maven.war.plugin}</version>
+                        <configuration>
+                            <warName>webService</warName>
+                            <outputDirectory>/opt/tomcat/webapps/</outputDirectory>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </pluginManagement>
+        </build>
+    </profile>
+    <profile>
+        <id>travis</id>
+        <build>
+            <pluginManagement>
+                <plugins>
+                    <!-- making the war -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-war-plugin</artifactId>
+                        <version>${maven.war.plugin}</version>
+                        <configuration>
+                            <warName>webService</warName>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </pluginManagement>
+        </build>
+    </profile>
+    </profiles>
 </project>
